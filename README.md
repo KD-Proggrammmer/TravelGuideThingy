@@ -1,1 +1,88 @@
 # TravelGuideThingy
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        padding:25px;
+        background-image: url("https://img.freepik.com/free-vector/gradient-abstract-with-diagonal-lines-background_23-2150527316.jpg?semt=ais_hybrid");
+      }
+      .header {
+      height:100px;
+      background:linear-gradient(45deg, #33c9ff, #00ff8c);
+      text-align:center;
+      color:white;
+      padding:10px;
+      animation:HeaderColorShift 3s infinite;
+      }
+      @keyframes HeaderColorShift {
+       from {background:linear-gradient(45deg, #33c9ff, #00ff8c);}
+       to {background:linear-gradient(45deg, #00ff8c, #33c9ff);}
+      }
+      .gallery {
+        display:flex;
+        justify-content:center;
+        gap:10px 10px;
+        flex-wrap:wrap;
+      }
+      .image-container {
+        position:relative;
+        height:200px;
+        width:200px;
+        border-radius: 20px;
+        transition: transform 0.3s ease;
+      }
+      .image-container img {
+        width:100%;
+        height:100%;
+      }
+      .image-container:hover img {
+      transform:scale(1.1);
+      }
+      .image-overlay {
+        position:absolute;
+        bottom: 0;
+        right:0;
+        left:0;
+        background:rgba(0,0,0,0.5);
+        opacity:0;
+        color:white;
+        text-align:center;
+        transition:opacity 3s ease;
+      }
+      .image-container:hover .image-overlay {
+        opacity:1;
+      }
+    </style>
+  </head>
+  <body>
+      <div class="header">
+        <h1>Global Travel Guide</h1>
+    </div>
+    
+    <div class="gallery">
+      <div class="image-container">
+        <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcR_4zDS-4EQ3-oRcyBLgBW9W0cZdgj_PG3acr-ub7r8qilVtt63qp0DdjAxFqWzAiH1xYWTPslD0F9uk5_5pkhRDbNm5B7JNGIVdQtCww" alt="Dubai">
+      <div class="image-overlay">
+        <h3>Dubai, United Arab States</h3>
+        <p>Futuristic Paradise</p>
+      </div>
+   </div>
+        <div class="image-container">
+        <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcQ1t6-lagr4McF9hezeepKt44-MbLOYK1R0Qg0-j9Vm7qix69ZzRvAldURasz60T3ADWQCjbKfnh2jDLMiEX9zSYYQJDlzQ42eGlfRZoA"alt="Seoul">
+      <div class="image-overlay">
+        <h3>Seoul, South Korea</h3>
+        <p>Place of Calm</p>
+      </div>
+    </div>
+            <div class="image-container">
+        <img src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcRtEfYktmuNfrrgG6HSyTU5fyBLDozxBpoJ23naS-QJzur9lZp0jf-9C0YeDxgrYg5nDQZdNep7F9XIc2rfmYWHls8XY0jcMWlzU2IQiQY"alt="Shanghai">
+      <div class="image-overlay">
+        <h3>Shanghai, China</h3>
+        <p>Mega City</p>
+      </div>
+    </div>
+
+    </div>
+  </body>
+</html>
